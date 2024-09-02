@@ -1,0 +1,124 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #f0f0f0;
+}
+
+img {
+    align-items: flex-end;
+    width: 10%;
+    height: auto;
+    flex-direction: row;
+}
+
+html, body {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-image: 
+        radial-gradient(circle at left bottom, 
+        #6b48e0 0%, #ffff 20%, 
+        rgba(93, 48, 170, 0.733) 20%, #fffb 30%, 
+        rgba(171, 68, 245, 0.4) 30%, #fff6 40%, 
+        rgba(142, 25, 205, 0.133) 40%, #fff2 50%, 
+        transparent 50%, transparent 100%),
+        url(https://placecage.com/100/100);
+    background-size: 100% 100%, cover;
+    background-position: bottom left, center;
+    background-repeat: no-repeat;
+
+    animation: nome 5s infinite;
+}
+@keyframes nome {
+    50% {
+        background-size: 120% 120%, cover;
+    }
+}
+
+.calculator {
+    display: grid;
+
+    grid-template-rows: 1fr 4fr;
+
+    width: 440px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0.1);
+    border-radius: 10px;
+  
+}
+
+.kuromi {
+    position: absolute;
+    bottom: 20px;
+    right: 20px; 
+    width: 10%; 
+}
+
+.display {
+    grid-row: 1/2;
+    font-size: 2em;
+    padding: 20px;
+    text-align: right;
+    border: none;
+    background-color: #222;
+    color: #a77ecd;
+}
+
+.buttons {
+    display: grid; 
+    grid-template-columns: repeat(4, 1fr); 
+    grid-gap: 10px; 
+    padding: 20px;
+}
+
+.btn {
+    font-size: 1.5em;
+    padding: 20px;
+    border: none;
+    background-color: #f0f0f0;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    }
+    
+.btn:hover {
+    background-color: #ddd; 
+}
+
+.operator {
+    background-color: #3a066ec6; 
+    color: white; 
+    }
+
+.operator:hover {
+    background-color: #441d82;
+}
+
+.equals {
+    grid-column: span 1;
+    background-color: #9e83f1; 
+    color: white; 
+    }
+    
+.equals:hover {
+    background-color: #2f138d;
+}
+
+.clear {
+    grid-column: span 4; 
+    background-color: #841d94; 
+    color: white;
+}
+
+.clear:hover {
+    background-color: #4d0857;
+    }
